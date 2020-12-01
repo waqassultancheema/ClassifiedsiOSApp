@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JFA-J3-121">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="guh-ea-yKU">
+            <objects>
+                <navigationController id="JFA-J3-121" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gUp-8g-OWh">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hMs-U2-gMu">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="1cf-4G-Imx" kind="relationship" relationship="rootViewController" id="1I0-CZ-779"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tho-lS-PaX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1070" y="2"/>
+        </scene>
+        <!--ClassifiedViewController-->
+        <scene sceneID="8gU-1l-uRn">
+            <objects>
+                <viewController storyboardIdentifier="ClassifiedViewController" title="ClassifiedViewController" id="1cf-4G-Imx" customClass="ClassifiedViewController" customModule="ClassifiedsiOSApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1dO-hl-x6q">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7tT-Dk-fdE" customClass="ShadesView" customModule="ClassifiedsiOSApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="88" width="414" height="60"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="aX2-Qs-QIk">
+                                        <rect key="frame" x="5" y="0.0" width="404" height="60"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Classifieds" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fwc-H7-8aK">
+                                                <rect key="frame" x="0.0" y="0.0" width="404" height="60"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <constraints>
+                                    <constraint firstItem="aX2-Qs-QIk" firstAttribute="leading" secondItem="7tT-Dk-fdE" secondAttribute="leading" constant="5" id="7q2-bu-dV8"/>
+                                    <constraint firstAttribute="trailing" secondItem="aX2-Qs-QIk" secondAttribute="trailing" constant="5" id="9mt-wb-KgU"/>
+                                    <constraint firstItem="aX2-Qs-QIk" firstAttribute="top" secondItem="7tT-Dk-fdE" secondAttribute="top" id="hhX-X3-UBD"/>
+                                    <constraint firstAttribute="bottom" secondItem="aX2-Qs-QIk" secondAttribute="bottom" id="mYB-FX-eHP"/>
+                                    <constraint firstAttribute="height" constant="60" id="o8Z-lg-ufX"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JAm-xL-BkZ">
+                                <rect key="frame" x="0.0" y="148" width="414" height="714"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="LYd-VX-K0S"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="LYd-VX-K0S" firstAttribute="bottom" secondItem="JAm-xL-BkZ" secondAttribute="bottom" id="4hA-mm-2e1"/>
+                            <constraint firstItem="LYd-VX-K0S" firstAttribute="trailing" secondItem="JAm-xL-BkZ" secondAttribute="trailing" id="5lO-FZ-haR"/>
+                            <constraint firstItem="7tT-Dk-fdE" firstAttribute="leading" secondItem="LYd-VX-K0S" secondAttribute="leading" id="UgG-zu-TxT"/>
+                            <constraint firstItem="JAm-xL-BkZ" firstAttribute="top" secondItem="7tT-Dk-fdE" secondAttribute="bottom" id="Y03-ti-ZCQ"/>
+                            <constraint firstItem="JAm-xL-BkZ" firstAttribute="leading" secondItem="LYd-VX-K0S" secondAttribute="leading" id="a5D-lw-08E"/>
+                            <constraint firstItem="7tT-Dk-fdE" firstAttribute="top" secondItem="LYd-VX-K0S" secondAttribute="top" id="m1A-1m-VoI"/>
+                            <constraint firstItem="LYd-VX-K0S" firstAttribute="trailing" secondItem="7tT-Dk-fdE" secondAttribute="trailing" id="vi4-vT-5hW"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Classifieds" id="VMn-mJ-6J7"/>
+                    <connections>
+                        <outlet property="tableView" destination="JAm-xL-BkZ" id="z0B-Kp-RhV"/>
+                        <segue destination="Glc-oD-QWG" kind="show" identifier="showDetail" id="I9i-sL-DJl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Llo-wP-o3x" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="168.11594202898553" y="123.88392857142857"/>
+        </scene>
+        <!--Classified Detail-->
+        <scene sceneID="ly9-yd-cYO">
+            <objects>
+                <viewController storyboardIdentifier="ClassifiedDetailViewController" title="Classified Detail" hidesBottomBarWhenPushed="YES" id="Glc-oD-QWG" customClass="ClassifiedDetailViewController" customModule="ClassifiedsiOSApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2z9-h7-iN6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3M8-O9-W8A">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="nVT-NQ-8E3"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="3M8-O9-W8A" firstAttribute="trailing" secondItem="nVT-NQ-8E3" secondAttribute="trailing" id="2xA-xP-R6o"/>
+                            <constraint firstItem="3M8-O9-W8A" firstAttribute="leading" secondItem="nVT-NQ-8E3" secondAttribute="leading" id="cTl-6N-QrR"/>
+                            <constraint firstItem="3M8-O9-W8A" firstAttribute="top" secondItem="nVT-NQ-8E3" secondAttribute="top" id="ohb-cF-PKd"/>
+                            <constraint firstItem="nVT-NQ-8E3" firstAttribute="bottom" secondItem="3M8-O9-W8A" secondAttribute="bottom" id="yqt-zW-2Yi"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="3M8-O9-W8A" id="HmK-Sr-HHb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jct-NH-lso" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationItem title="Detail" leftItemsSupplementBackButton="YES" id="lI3-KR-OJh">
+                    <barButtonItem key="backBarButtonItem" title="Back" id="sY3-6r-W6g"/>
+                </navigationItem>
+            </objects>
+            <point key="canvasLocation" x="900" y="118"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
